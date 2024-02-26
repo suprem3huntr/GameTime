@@ -10,6 +10,7 @@ h1{
   --clr-bg: rgb(8, 5, 54);
 }
 body{
+  overflow: hidden;
   height: 100vh;
   background-image: linear-gradient(to top, rgb(1, 4, 60),rgb(18, 12, 66),rgb(23, 28, 67)) ;
   animation: textShadow 1.6s infinite;
@@ -269,4 +270,7 @@ body::before {
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+}
+audio{
+  visibility: hidden;
 }
