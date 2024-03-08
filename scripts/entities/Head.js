@@ -1,12 +1,14 @@
 class Head
 {
-    constructor(game,x,y,spritesheet)
+    constructor(game,x,y)
     {
-        Object.assign(this,{game,x,y,spritesheet});
+        this.game = game;
+        this.x = (x*2 + 1)*SNAKERADIUS;
+        this.y = (y*2 + 1)*SNAKERADIUS;
         this.movement = 0; // right = 0, down =1, left =2,up =3;
         this.last = this;
         this.counter = 0;
-        GRID[((x/SNAKERADIUS)-1)/2][((y/SNAKERADIUS)-1)/2] = 1;
+        GRID[x][y] = 1;
         this.dead = false;
 
     }
@@ -63,7 +65,7 @@ class Head
                         this.y -= SNAKERADIUS * 2;
                         break;
                 }
-                if(this.x > SNAKERADIUS * 2 * 19 || this.x<0 || this.y > SNAKERADIUS * 2 * 19 || this.y<0)
+                if(this.x > SNAKERADIUS * (2 * 19 +1) || this.x<0 || this.y > SNAKERADIUS * (2 * 19 + 1) || this.y<0)
                 {
                     this.kill();
                 }
@@ -88,9 +90,8 @@ class Head
     }
     draw(ctx)
     {
-        ctx.beginPath();
-        ctx.arc(this.x,this.y,SNAKERADIUS,0,2*Math.PI);
-        ctx.stroke();
+        ctx.fillStyle = "black";
+        ctx.fillRect(this.x-SNAKERADIUS+2.5,this.y-SNAKERADIUS+2.5,2*SNAKERADIUS-5,2*SNAKERADIUS-5);
     }
 
 
@@ -98,8 +99,9 @@ class Head
     {
         for(var i = 0; i < 2; i++)
         {
-            
-            this.last = new Body(this.last.x - 2*SNAKERADIUS,this.last.y,this.last,this.game,this.counter);
+            var adjustedx =((this.last.x/SNAKERADIUS)-1)/2;   
+            var adjustedy =((this.last.y/SNAKERADIUS)-1)/2;   
+            this.last = new Body(adjustedx - 1,adjustedy,this.last,this.game,this.counter);
             this.game.addEntity(this.last);
         }
         //this.game.entities.reverse();

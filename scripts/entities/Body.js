@@ -2,9 +2,11 @@ class Body
 {
     constructor(x,y,prev,game,counter)
     {
-        
-        Object.assign(this,{x,y,prev,game,counter});
-        GRID[((x/SNAKERADIUS)-1)/2][((y/SNAKERADIUS)-1)/2] = 1;
+        Object.assign(this,{prev,counter});
+        this.game = game;
+        this.x = (x*2 + 1)*SNAKERADIUS;
+        this.y = (y*2 + 1)*SNAKERADIUS;;
+        GRID[x][y] = 1;
         this.dead = false;
 
     }
@@ -31,18 +33,16 @@ class Body
     draw(ctx)
     {
 
-        ctx.strokeStyle = "blue";
-        ctx.beginPath();
-        ctx.arc(this.x,this.y,SNAKERADIUS,0,2*Math.PI);
-        ctx.stroke();
-        ctx.strokeStyle = "black";
+        ctx.fillStyle = "white";
+        ctx.fillRect(this.x-SNAKERADIUS+2.5,this.y-SNAKERADIUS+2.5,2*SNAKERADIUS-5,2*SNAKERADIUS-5);
     }
 
 
     createSnake()
     {
-        
-        var newBody = new Body(this.oldx,this.oldy,this,this.game,this.counter);
+        var newposx =((this.oldx/SNAKERADIUS)-1)/2;   
+        var newposy =((this.oldy/SNAKERADIUS)-1)/2;   
+        var newBody = new Body(newposx,newposy,this,this.game,this.counter);
         this.game.addEntity(newBody);
         return newBody;
         

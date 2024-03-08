@@ -13,7 +13,7 @@ ASSET_MANAGER.downloadAll(function(){
     gameEngine.init(ctx);
     //gameEngine.addEntity(new SceneManager(gameEngine));
 
-    gameEngine.addEntity(new Head(gameEngine,SNAKERADIUS*5,SNAKERADIUS,0));
+    gameEngine.addEntity(new Head(gameEngine,2,0));
     gameEngine.addEntity(new Food(19*SNAKERADIUS,19*SNAKERADIUS,gameEngine));
 ;
     gameEngine.start();
