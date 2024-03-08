@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snake</title>
+  <link rel="stylesheet" href="./styles/snake.css">
   <script type="text/javascript" src="scripts/core/utilities.js"></script>
   <script type="text/javascript" src="scripts/core/Timer.js"></script>
   <script type="text/javascript" src="scripts/core/AssetManager.js"></script>
@@ -16,6 +17,11 @@
   <script type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
-  <canvas id="snakeCanvas" width="600" height = "600" style = "border: 5px solid darkgray;background-color: gray;" autofocus tabindex="0"></canvas>
+  <div id="forHighscore"></div>
+  <div id="middleDiv">
+   <h1 id="gameTitle">SNAKE</h1> 
+  <canvas id="snakeCanvas" width="600" height = "600" autofocus tabindex="0"></canvas>
+  </div>
+  <div id="forButtons"></div>
 </body>
 </html>

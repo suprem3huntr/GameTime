@@ -10,6 +10,7 @@ class Head
         this.counter = 0;
         GRID[x][y] = 1;
         this.dead = false;
+        this.incspeed = false;
 
     }
 
@@ -19,6 +20,14 @@ class Head
     }
     update()
     {
+        if(this.incspeed)
+        {
+            this.incspeed = false;
+            if(UPDATES!=7)
+            {
+                UPDATES=UPDATES-1;
+            }
+        }
         if(!this.dead)
         {
             var TICK = this.game.clockTick;
@@ -90,7 +99,7 @@ class Head
     }
     draw(ctx)
     {
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "blue";
         ctx.fillRect(this.x-SNAKERADIUS+2.5,this.y-SNAKERADIUS+2.5,2*SNAKERADIUS-5,2*SNAKERADIUS-5);
     }
 
@@ -110,6 +119,7 @@ class Head
     increaseBody()
     {
         this.last = this.last.createSnake();
+        //this.incspeed = true;
     }
 
     checkCollision()

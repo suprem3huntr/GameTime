@@ -33,7 +33,7 @@ class Body
     draw(ctx)
     {
 
-        ctx.fillStyle = "white";
+        ctx.fillStyle = "hsl(206 100% 54%)";
         ctx.fillRect(this.x-SNAKERADIUS+2.5,this.y-SNAKERADIUS+2.5,2*SNAKERADIUS-5,2*SNAKERADIUS-5);
     }
 
