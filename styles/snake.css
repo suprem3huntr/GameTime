@@ -35,6 +35,7 @@ body{
 }
 #gameTitle{
   padding-left: 35%;
+  padding-bottom: 250px;
 }
 /* for text */
 @keyframes flicker-1 {
