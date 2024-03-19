@@ -7,11 +7,10 @@
 }
 
 /* for all text */
-.gameTitle, 
-.highScore {
+.gameTitle {
   animation: flicker-1 0.5s infinite alternate; 
   color:#fff;
-font-size: 50px;
+ font-size: 50px;
 }
 .highScore{
   font-size: 35px;
@@ -35,6 +34,7 @@ body{
 }
 #gameTitle{
   padding-left: 35%;
+  padding-bottom: 250px;
 }
 /* for text */
 @keyframes flicker-1 {
@@ -153,16 +153,37 @@ body::before {
   }
 }
 
-/* divs to the highscore part */
-#forHighscore{
-  padding-left: 80%;
-  padding-top: 20%;
-  padding-right: 0%;
-  margin: 0;
-  border: none;
+
+#score{
+  display: inline;
 }
-.highScore{
-  border: solid #fff;
-  padding-bottom: 50px;
-  border-radius: 5px;
+#filler-text{
+  display: inline;
+}
+.score{
+  font-size: 4rem;
+}
+#score-board{
+  padding-top: 2rem;
+  padding-bottom: 0px;
+  text-align: center;
+  height: 10rem;
+  width: 15rem;
+  border: solid;
+  border-width: 5px;
+  border-radius: 1px;
+  border-color: #fff;
+  translate: 23rem 6.5rem;
+  background-color: rgb(176, 176, 176);
+}
+#restart{
+  padding: 20px 20px 20px;
+  translate: 4rem 10rem;
+  font-size: 4rem;
+  color:#000000; 
+  background-color: rgb(176, 176, 176);
+  border: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  animation: textshadow 0.5s infinite alternate;
 }

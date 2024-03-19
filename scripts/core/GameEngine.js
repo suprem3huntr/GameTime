@@ -14,6 +14,8 @@ class GameEngine
         this.down = false;
     };
 
+    
+
     init(ctx)//call post loading
     {
         this.ctx = ctx;
@@ -89,6 +91,15 @@ class GameEngine
         for(var i = 0; i< this.entities.length;i++)
         {
             this.entities[i].draw(this.ctx);
+        }
+        if(this.entities[0].dead)
+        {
+            
+            this.ctx.fillStyle= "white";
+            this.ctx.font = "italic bold 100px Tahoma";
+            this.ctx.fillText("You Died",80,80);
+            this.ctx.fillText("Score: "+Score,80,180);
+        
         }
     }
     startInput()

@@ -101,6 +101,7 @@ class Head
     {
         ctx.fillStyle = "blue";
         ctx.fillRect(this.x-SNAKERADIUS+2.5,this.y-SNAKERADIUS+2.5,2*SNAKERADIUS-5,2*SNAKERADIUS-5);
+        
     }
 
 
@@ -132,7 +133,8 @@ class Head
             {
                 if(ent instanceof Food)
                 {
-                    
+                    Score = Score+1;
+                    document.getElementById("score").innerHTML = Score.toString();
                     this.increaseBody();
                     ent.kill();
                 }
