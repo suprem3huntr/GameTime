@@ -59,7 +59,7 @@ button{
   width: 10rem;
   border-radius:10px ;
   border-color: var(--clr-neon-pink);
-  animation: flicker 2s infinite alternate;
+  
 }
 .text-3{
   display: inline-block;
