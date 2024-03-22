@@ -26,6 +26,15 @@ header{
   display: inline-block;
   font-size: 10rem;
   animation: wiggle-left 1s infinite;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
 }
 .text{
   margin-bottom: 2rem;
@@ -43,22 +52,41 @@ header{
 }
 button{
   font-size: 7rem;
-  border: solid;
   border-width:10px;
-  border-color:var(--clr-neon-pink) ;
+  border:var(--clr-neon-pink) 0.125em solid ;
   border-radius: 2rem;
   margin-left: 2rem;
-  background-color: var(--clr-neon-yellow);
-  
-
+  background-color: white;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe,
+    0 0 2.8rem #bc13fe,
+    inset 0 0 1.3rem #bc13fe; 
+}
+button:hover{
+  animation: flicker 0.5s infinite alternate;
 }
 #score-box{
   display: inline-block;
-  border: solid;
-  border-width: 10px;
+  border:var(--clr-neon-pink) 0.5em solid;
+  border-radius: 1em;
   width: 10rem;
-  border-radius:10px ;
-  border-color: var(--clr-neon-pink);
+  box-shadow: 0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 2rem #bc13fe,
+  0 0 0.8rem #bc13fe,
+  0 0 2.8rem #bc13fe,
+  inset 0 0 1.3rem #bc13fe; 
   
 }
 .text-3{
@@ -272,7 +300,4 @@ body::before {
   z-index: 2;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-}
-audio{
-  visibility: hidden;
 }
