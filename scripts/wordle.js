@@ -1,4 +1,4 @@
-const dictionary = ['hello', 'plane', 'train', 'apple', 'baker', 'camel', 'dance', 'eagle', 'fairy', 'globe', 'happy', 'jumbo', 'kiosk', 'lemon', 'magic', 'noble', 'ocean', 'piano', 'queen', 'radio', 'sunny', 'table', 'unity', 'vigor', 'whale', 'xerox', 'young', 'zebra', 'abide', 'blind', 'chair', 'drown', 'early', 'flour', 'green', 'hatch', 'ivory', 'joker', 'kebab', 'laugh', 'melon', 'nurse', 'opera', 'pupil', 'quilt', 'rusty', 'salsa', 'tiger', 'uncle', 'vivid', 'wrist', 'yacht', 'zesty', 'crane', ];
+const dictionary = ['hello', 'plane', 'train', 'apple', 'baker', 'camel', 'dance', 'eagle', 'fairy', 'globe', 'happy', 'jumbo', 'kiosk', 'lemon', 'magic', 'noble', 'ocean', 'piano', 'queen', 'radio', 'sunny', 'table', 'unity', 'vigor', 'whale', 'xerox', 'young', 'zebra', 'abide', 'blind', 'chair', 'drown', 'early', 'flour', 'green', 'hatch', 'ivory', 'joker', 'kebab', 'laugh', 'melon', 'nurse', 'opera', 'pupil', 'quilt', 'rusty', 'salsa', 'tiger', 'uncle', 'vivid', 'wrist', 'yacht', 'zesty', 'crane','track','chain' ];
 
 const state = { //maintain backend state of what letters
     secret: dictionary[Math.floor(Math.random() * dictionary.length)],
