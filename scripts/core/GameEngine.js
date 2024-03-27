@@ -26,7 +26,9 @@ class GameEngine
     };
 
     start()
-    {var entitiesCount = this.entities.length;
+    {
+        
+        var entitiesCount = this.entities.length;
 
         for (var i = 0; i < entitiesCount; i++)
         {

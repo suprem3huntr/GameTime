@@ -11,6 +11,7 @@ ASSET_MANAGER.downloadAll(function(){
 
     var canvas = document.getElementById("snakeCanvas");
     var ctx = canvas.getContext("2d");
+    canvas.focus();
     gameEngine.init(ctx);
     //gameEngine.addEntity(new SceneManager(gameEngine));
 
@@ -29,6 +30,7 @@ function restart()
     GRID = Array(20).fill().map(() => Array(20).fill(0));
 
     var canvas = document.getElementById("snakeCanvas");
+    canvas.focus();
     var ctx = canvas.getContext("2d");
     gameEngine.init(ctx);
     //gameEngine.addEntity(new SceneManager(gameEngine));
