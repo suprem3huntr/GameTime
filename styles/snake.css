@@ -24,7 +24,7 @@ body{
   grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
   height: 100vh;
-  background-image: linear-gradient(to top, rgb(1, 4, 60),rgb(18, 12, 66),rgb(23, 28, 67)) ;
+  background-color: var(--clr-bg) ;
   animation: textShadow 1.6s infinite;
 }
 
@@ -35,6 +35,9 @@ body{
 #gameTitle{
   padding-left: 35%;
   padding-bottom: 250px;
+}
+#home-button{
+  translate: -90rem 5rem;
 }
 /* for text */
 @keyframes flicker-1 {
@@ -242,9 +245,6 @@ body::before {
   background-color: rgb(176, 176, 176);
 }
 #restart{
-  visibility: visible;
-}
-.restart{
-  height: 100px;
-  padding: none;
+  height: 10rem;
+ translate: 0 4rem;
 }

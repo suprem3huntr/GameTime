@@ -55,7 +55,12 @@ body {
 }
 
 h1{
+  font-size: 5rem;
     color:white;
+  display: inline;
+}
+#home-button{
+  translate: -10rem 15rem;
 }
 
 
