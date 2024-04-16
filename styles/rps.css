@@ -10,6 +10,7 @@ body{
   text-align: center;
   background-color: var(--clr-bg);
   animation: textShadow 1.6s infinite;
+  overflow: hidden;
 }
 
 header{
@@ -51,7 +52,7 @@ header{
   animation: flicker-1 0.5s infinite alternate;
 }
 button{
-  font-size: 7rem;
+  
   border-width:10px;
   border:var(--clr-neon-pink) 0.125em solid ;
   border-radius: 2rem;
@@ -110,6 +111,19 @@ button:hover{
   animation: flicker-1 0.5s infinite alternate;
 
 } 
+#btn-rock{
+  font-size: 7rem;
+}
+#btn-paper{
+  font-size: 7rem;
+}
+#btn-scisscor{
+  font-size: 7rem;
+}
+#home-button{
+  translate: -45rem 0;
+  height: 4rem;
+}
 
 @keyframes wiggle-left{
   0%{
