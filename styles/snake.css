@@ -37,7 +37,8 @@ body{
   padding-bottom: 250px;
 }
 #home-button{
-  translate: -90rem 5rem;
+  height: 10rem;
+ translate: 0 4rem;
 }
 /* for text */
 @keyframes flicker-1 {
@@ -241,7 +242,7 @@ body::before {
   border-width: 5px;
   border-radius: 1px;
   border-color: #fff;
-  translate: 23rem 6.5rem;
+  translate: 10rem 6.5rem;
   background-color: rgb(176, 176, 176);
 }
 #restart{

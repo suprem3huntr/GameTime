@@ -5756,7 +5756,7 @@ const dictionary = [
     "rumba",
     "biffy",
     "pupal",
-]
+];
 
 const state = { //maintain backend state of what letters
     secret: dictionary[Math.floor(Math.random() * dictionary.length)],
