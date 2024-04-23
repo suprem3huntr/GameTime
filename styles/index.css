@@ -2,6 +2,10 @@ h1{
   font-size: 500%;
 }
 
+h2{
+  font-size: 100%
+}
+
 :root {
   --clr-neon-pink: hsl(317 100% 54%);
   --clr-neon-green:hsl(136, 100%, 53%);
@@ -33,6 +37,10 @@ a{
 .text-align{
   display: grid;
   justify-content: center;
+}
+.author-align{
+  display:grid;
+  justify-content: right;
 }
 .buttons{
   cursor: pointer;

@@ -5843,14 +5843,18 @@ function revealWord(guess){
         const box = document.getElementById(`box${row}${i}`);
         const letter = box.textContent;
 
+
         if(letter === state.secret[i]){
-            box.classList.add('right');
+            box.classList.add('right'); //green
+        }
+        else if(state.secret.includes(letter) && letter !== state.secret[i]){
+            box.classList.add('empty'); //yellow
         }
         else if(state.secret.includes(letter)){
-            box.classList.add('wrong');
+            box.classList.add('wrong'); //yellow
         }
         else{
-            box.classList.add('empty');
+            box.classList.add('empty'); //gray
         }
     }
 
