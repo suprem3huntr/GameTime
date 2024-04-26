@@ -1,7 +1,9 @@
 html,
-body {
-    background: var(--clr-bg);
-
+body{
+  text-align: center;
+  background-color: var(--clr-bg);
+  animation: textShadow 1.6s infinite;
+  overflow: hidden;
 }
 
 :root {
@@ -244,4 +246,13 @@ h1{
     100% {
       opacity: 0.24387;
     }
+  }
+  header{
+    font-size: xxx-large;
+    color: white;
+    animation: flicker-1 0.5s infinite alternate;
+  }
+  #home-button{
+    translate: 0;
+    height: 4rem;
   }

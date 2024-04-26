@@ -121,7 +121,7 @@ button:hover{
   font-size: 7rem;
 }
 #home-button{
-  translate: -45rem 0;
+  translate:0;
   height: 4rem;
 }
 
