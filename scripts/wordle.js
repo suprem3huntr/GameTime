@@ -5836,26 +5836,51 @@ function isWordValid(word){
     return dictionary.includes(word);
 }
 
+
+
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
+}
+
 function revealWord(guess){
     const row = state.currentRow;
-
+    var word = state.secret;
+    var skip = [];
     for(let i =0; i<5; i++){
         const box = document.getElementById(`box${row}${i}`);
         const letter = box.textContent;
 
 
-        if(letter === state.secret[i]){
+        if(letter === word[i]){
             box.classList.add('right'); //green
+            word = setCharAt(word,i,"%");
+            skip.push(i);
+            
         }
-        else if(state.secret.includes(letter) && letter !== state.secret[i]){
-            box.classList.add('empty'); //yellow
+        
+        
+    }
+    for(let i =0; i<5; i++){
+        if(!skip.includes(i))
+        {
+            const box = document.getElementById(`box${row}${i}`);
+            const letter = box.textContent;
+            if(word.includes(letter))
+            {
+                box.classList.add('wrong');//yellow
+            }
+            else
+            {
+                box.classList.add('empty');//gray
+            }
+
         }
-        else if(state.secret.includes(letter)){
-            box.classList.add('wrong'); //yellow
-        }
-        else{
-            box.classList.add('empty'); //gray
-        }
+
+
+        
+        
+        
     }
 
     const isWinner = state.secret === guess;
